@@ -1,0 +1,19 @@
+[project]
+name = "pkgtest"
+version = "0.1.0"
+description = "Add your description here"
+authors = [{ name = "ericaua", email = "erik.ulfhielm@gmail.com" }]
+dependencies = ["typer~=0.12.5", "fastapi~=0.115.2"]
+readme = "README.md"
+requires-python = ">= 3.8"
+
+[project.scripts]
+pkgtest = "pkgtest.main:main"
+
+[build-system]
+requires = ["pdm-backend"]
+build-backend = "pdm.backend"
+
+[tool.rye]
+managed = true
+dev-dependencies = []

@@ -1,0 +1,23 @@
+{
+    "[markdown]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+    },
+    "python.analysis.typeCheckingMode": "strict",
+    "python.testing.pytestArgs": [
+        "tests",
+    ],
+    "python.testing.unittestEnabled": false,
+    "python.testing.pytestEnabled": true,
+    "python.analysis.autoImportCompletions": true,
+    "[python]": {
+        "editor.formatOnSave": true,
+        "editor.codeActionsOnSave": {
+            "source.fixAll": "explicit",
+            "source.organizeImports": "explicit"
+        },
+        "editor.defaultFormatter": "charliermarsh.ruff"
+    },
+    "editor.fontFamily": "Fira Code",
+    "editor.fontLigatures": true,
+    "makefile.configureOnOpen": false,
+}
