@@ -9,6 +9,11 @@ log = logging.getLogger(__name__)
 app = typer.Typer()
 
 
+@app.command("/")
+def root() -> None:
+    log.info("Hello World")
+
+
 @app.command("hello")
 @app.command("hi")
 def hello(name: str) -> None:
