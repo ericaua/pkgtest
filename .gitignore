@@ -1,4 +1,5 @@
 .pdm-build
+lcov.info
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

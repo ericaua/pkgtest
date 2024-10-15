@@ -37,8 +37,8 @@ dev-dependencies = [
 [tool.semantic_release]
 version_variable = "pyproject.toml:version"
 
-# [tool.pytest.ini_options]
-# addopts = "--cov=pkgtest --cov-report=lcov:lcov.info"
+[tool.pytest.ini_options]
+addopts = "--cov=pkgtest --cov-report=lcov:lcov.info"
 
 [tool.mypy]
 mypy_path = "typings"

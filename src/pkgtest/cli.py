@@ -11,7 +11,9 @@ app = typer.Typer()
 
 @app.command("/")
 def root() -> None:
-    log.info("Hello World")
+    res = "Hello World"
+    log.info(res)
+    print(res)
 
 
 @app.command("hello")
@@ -19,6 +21,7 @@ def root() -> None:
 def hello(name: str) -> None:
     res = services.hello(name)
     log.info(res)
+    print(res)
 
 
 @app.command("goodbye")
@@ -26,8 +29,11 @@ def hello(name: str) -> None:
 def goodbye(name: str) -> None:
     res = services.goodbye(name)
     log.info(res)
+    print(res)
 
 
 @app.command()
 def config() -> None:
-    log.info(settings)
+    res = settings
+    log.info(res)
+    print(res)
