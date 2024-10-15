@@ -5,13 +5,13 @@ from pkgtest.api import app
 client = TestClient(app)
 
 
-def test_root():
+def test_root() -> None:
     response = client.get("/")
     assert response.status_code == 200
     assert response.json() == "Hello World"
 
 
-def test_hello():
+def test_hello() -> None:
     name = "asdf"
     response = client.get(f"/hello?name={name}")
     assert response.status_code == 200
@@ -21,7 +21,7 @@ def test_hello():
     assert response.json() == f"Hello {name}!"
 
 
-def test_goodbye():
+def test_goodbye() -> None:
     name = "asdf"
     response = client.get(f"/goodbye?name={name}")
     assert response.status_code == 200
@@ -31,6 +31,6 @@ def test_goodbye():
     assert response.json() == f"Goodbye {name}!"
 
 
-def test_config():
+def test_config() -> None:
     response = client.get("/config")
     assert response.status_code == 200
