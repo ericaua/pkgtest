@@ -34,3 +34,10 @@ def test_goodbye() -> None:
 def test_config() -> None:
     response = client.get("/config")
     assert response.status_code == 200
+
+
+def test_add() -> None:
+    a, b = 17, 42
+    response = client.get(f"/add?a={a}&b={b}")
+    assert response.status_code == 200
+    assert response.json() == a + b

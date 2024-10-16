@@ -1,4 +1,5 @@
 .pdm-build
+.ruff_cache
 lcov.info
 
 # Byte-compiled / optimized / DLL files

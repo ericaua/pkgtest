@@ -4,3 +4,7 @@ def hello(name: str) -> str:
 
 def goodbye(name: str) -> str:
     return f"Goodbye {name}!"
+
+
+def add(a: int, b: int) -> int:
+    return a + b

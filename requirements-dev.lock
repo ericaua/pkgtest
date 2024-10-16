@@ -100,7 +100,7 @@ pydantic-core==2.23.4
     # via pydantic
 pygments==2.18.0
     # via rich
-pyright==1.1.384
+pyright==1.1.385
 pytest==8.3.3
     # via pytest-cov
 pytest-cov==5.0.0

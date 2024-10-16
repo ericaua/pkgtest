@@ -35,3 +35,10 @@ async def config() -> Settings:
     res = settings
     log.info(res)
     return res
+
+
+@app.get("/add")
+async def add(a: int, b: int) -> int:
+    res = services.add(a, b)
+    log.info(res)
+    return res
