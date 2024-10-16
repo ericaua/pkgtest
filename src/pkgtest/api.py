@@ -42,3 +42,10 @@ async def add(a: int, b: int) -> int:
     res = services.add(a, b)
     log.info(res)
     return res
+
+
+@app.get("/sub")
+async def sub(a: int, b: int) -> int:
+    res = services.sub(a, b)
+    log.info(res)
+    return res

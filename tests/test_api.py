@@ -41,3 +41,10 @@ def test_add() -> None:
     response = client.get(f"/add?a={a}&b={b}")
     assert response.status_code == 200
     assert response.json() == a + b
+
+
+def test_sub() -> None:
+    a, b = 17, 42
+    response = client.get(f"/sub?a={a}&b={b}")
+    assert response.status_code == 200
+    assert response.json() == a - b
