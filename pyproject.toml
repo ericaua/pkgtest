@@ -13,7 +13,7 @@ pkgtest = "pkgtest.main:main"
 [tool.rye.scripts]
 lint = "rye lint --fix"
 fmt = "rye fmt"
-type = "mypy --strict src tests"                  # pyright
+type = "mypy --strict src tests"                  # pyright src tests
 test = "rye test --quiet"
 all = { chain = ["lint", "fmt", "type", "test"] }
 
@@ -41,7 +41,3 @@ addopts = "--cov=pkgtest --cov-report=lcov:lcov.info"
 
 [tool.mypy]
 mypy_path = "typings"
-
-[tool.pyright]
-include = ["src"]
-exclude = []
