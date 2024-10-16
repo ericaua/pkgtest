@@ -44,3 +44,10 @@ def add(a: int, b: int) -> None:
     res = services.add(a, b)
     log.info(res)
     print(res)
+
+
+@app.command()
+def sub(a: int, b: int) -> None:
+    res = services.sub(a, b)
+    log.info(res)
+    print(res)
