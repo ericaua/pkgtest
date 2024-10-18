@@ -76,7 +76,7 @@ jinja2==3.1.4
     # via python-semantic-release
 markdown-it-py==3.0.0
     # via rich
-markupsafe==3.0.1
+markupsafe==3.0.2
     # via jinja2
 mdurl==0.1.2
     # via markdown-it-py
@@ -152,7 +152,7 @@ uvicorn==0.32.0
     # via fastapi-cli
 uvloop==0.21.0
     # via uvicorn
-virtualenv==20.26.6
+virtualenv==20.27.0
     # via pre-commit
 watchfiles==0.24.0
     # via uvicorn
