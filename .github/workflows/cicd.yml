@@ -21,7 +21,7 @@ jobs:
           rye run type
           rye run pytest tests/ --cov=pkgtest --cov-report=xml
 
-  cd:
+  pypi-publish:
     name: publish
     needs: ci
     if: github.event_name == 'push' && github.ref == 'refs/heads/main'
