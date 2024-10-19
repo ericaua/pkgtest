@@ -1,6 +1,6 @@
 [project]
 name = "pkgtest"
-version = "0.0.0"
+version = "0.1.0"
 description = "Add your description here"
 authors = [{ name = "ericaua", email = "erik.ulfhielm@gmail.com" }]
 dependencies = ["typer~=0.12.5", "fastapi[standard]~=0.115.2"]

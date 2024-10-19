@@ -7,8 +7,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: eifinger/setup-rye@v4
       - uses: actions/checkout@v4
+      - uses: eifinger/setup-rye@v4
 
       - name: Install dependencies
         run: |
@@ -28,10 +28,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: eifinger/setup-rye@v4
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
+      - uses: eifinger/setup-rye@v4
 
       - name: Bump version
         run: rye version -b patch
