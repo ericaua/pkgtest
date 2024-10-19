@@ -5,7 +5,7 @@ description = "Add your description here"
 authors = [{ name = "ericaua", email = "erik.ulfhielm@gmail.com" }]
 dependencies = ["typer~=0.12.5", "fastapi[standard]~=0.115.2"]
 readme = "README.md"
-requires-python = ">= 3.8"
+requires-python = ">= 3.12"
 
 [project.scripts]
 pkgtest = "pkgtest.__main__:main"
