@@ -35,7 +35,7 @@ jobs:
       - uses: eifinger/setup-rye@v4
 
       - name: build
-        run: rye build --clean --wheel
+        run: rye build --clean
 
       - name: Publish package distributions to Test PyPI
         uses: pypa/gh-action-pypi-publish@release/v1
