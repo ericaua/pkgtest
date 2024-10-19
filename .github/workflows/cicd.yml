@@ -1,0 +1,19 @@
+name: cicd
+
+on: [push, pull_request]
+
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+      - uses: eifinger/setup-rye@v4
+
+      - name: Install dependencies
+        run: |
+          rye sync --no-lock
+
+      - name: Run checks
+        run: |
+          rye run all
