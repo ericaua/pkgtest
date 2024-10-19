@@ -1,2 +1,2 @@
 # pkgtest
-Test github workflows, ci, publish
+Test github workflows, ci, publish, deploy
