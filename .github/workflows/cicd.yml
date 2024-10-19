@@ -5,10 +5,14 @@ on: [push, pull_request, workflow_dispatch]
 jobs:
   ci:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        py: ["3.10", "3.11", "3.12"]
 
     steps:
       - uses: actions/checkout@v4
       - uses: eifinger/setup-rye@v4
+      - run: rye pin $
 
       - name: Install dependencies
         run: |
