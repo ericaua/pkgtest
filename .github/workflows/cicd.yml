@@ -33,14 +33,17 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
+        # with:
+        #   fetch-depth: 0
       - uses: eifinger/setup-rye@v4
 
       - name: build
         run: rye build --clean --wheel
 
-      - name: Publish to TestPyPI
-        uses: pypa/gh-action-pypi-publish@release/v1
-        with:
-          repository-url: https://test.pypi.org/legacy/
+      # - name: Publish to TestPyPI
+      #   uses: pypa/gh-action-pypi-publish@release/v1
+      #   with:
+      #     repository-url: https://test.pypi.org/legacy/
+
+      - name: publish
+        run: rye publish --repository testpypi --repository-url https://test.pypi.org/legacy/
