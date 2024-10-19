@@ -1,6 +1,6 @@
 [project]
 name = "pkgtest"
-version = "0.1.0"
+version = "0.0.0"
 description = "Add your description here"
 authors = [{ name = "ericaua", email = "erik.ulfhielm@gmail.com" }]
 dependencies = ["typer~=0.12.5", "fastapi[standard]~=0.115.2"]
@@ -14,7 +14,7 @@ pkgtest = "pkgtest.__main__:main"
 lint = "rye lint --fix"
 fmt = "rye fmt"
 type = "mypy --strict src tests"                  # pyright src tests
-test = "rye test --quiet"
+test = "pytest tests --quiet"
 all = { chain = ["lint", "fmt", "type", "test"] }
 
 [build-system]
@@ -34,7 +34,23 @@ dev-dependencies = [
 
 
 [tool.semantic_release]
-version_variable = "pyproject.toml:version"
+version_variables = ["pyproject.toml:version"]
+
+[tool.semantic_release.commit_parser_options]
+allowed_tags = [
+    "build",
+    "chore",
+    "ci",
+    "docs",
+    "feat",
+    "fix",
+    "perf",
+    "style",
+    "refactor",
+    "test",
+]
+minor_tags = ["feat"]
+patch_tags = ["fix", "perf"]
 
 [tool.pytest.ini_options]
 addopts = "--cov=pkgtest --cov-report=lcov:lcov.info"
