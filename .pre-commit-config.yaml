@@ -1,44 +1,45 @@
 repos:
--   repo: https://github.com/pre-commit/pre-commit-hooks
+  - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v5.0.0
     hooks:
-    -   id: trailing-whitespace
-    -   id: end-of-file-fixer
-    -   id: check-yaml
-    -   id: check-added-large-files
+      - id: trailing-whitespace
+      - id: end-of-file-fixer
+      - id: check-yaml
+      - id: check-added-large-files
+      - id: no-commit-to-branch
 
-- repo: local
-  hooks:
-    - id: rye lint
-      name: rye lint
-      entry: rye run lint
-      language: system
-      types: [python]
-      pass_filenames: false
+  - repo: local
+    hooks:
+      - id: rye lint
+        name: rye lint
+        entry: rye run lint
+        language: system
+        types: [python]
+        pass_filenames: false
 
-- repo: local
-  hooks:
-    - id: rye fmt
-      name: rye fmt
-      entry: rye run fmt
-      language: system
-      types: [python]
-      pass_filenames: false
+  - repo: local
+    hooks:
+      - id: rye fmt
+        name: rye fmt
+        entry: rye run fmt
+        language: system
+        types: [python]
+        pass_filenames: false
 
-- repo: local
-  hooks:
-    - id: rye type
-      name: rye type
-      entry: rye run type
-      language: system
-      types: [python]
-      pass_filenames: false
+  - repo: local
+    hooks:
+      - id: rye type
+        name: rye type
+        entry: rye run type
+        language: system
+        types: [python]
+        pass_filenames: false
 
-- repo: local
-  hooks:
-    - id: rye test
-      name: rye test
-      entry: rye test
-      language: system
-      types: [python]
-      pass_filenames: false
+  - repo: local
+    hooks:
+      - id: rye test
+        name: rye test
+        entry: rye test
+        language: system
+        types: [python]
+        pass_filenames: false
