@@ -5,6 +5,8 @@
 
 ### Unknown
 
+* update cd wf ([`73ece7b`](https://github.com/ericaua/pkgtest/commit/73ece7b09f247777365d3d7c465a0b5d3ff59232))
+
 * add cd wf ([`8d02de6`](https://github.com/ericaua/pkgtest/commit/8d02de64f9ab49e80d8614fb56efed6acbe0e6fb))
 
 * add cicd wf ([`20b00e1`](https://github.com/ericaua/pkgtest/commit/20b00e1243b7ebc5d1da5905301b895a00e1f177))
