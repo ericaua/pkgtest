@@ -1,6 +1,6 @@
 name: Upload to TestPyPI
 
-on: [push, release]
+on: [release]
 
 jobs:
   pypi-publish:
