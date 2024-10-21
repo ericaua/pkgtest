@@ -1,9 +1,6 @@
-from pkgtest import cli
+import uvicorn
 
-
-def main() -> None:
-    cli.app()
-
+from pkgtest.api import app
 
 if __name__ == "__main__":
-    main()
+    uvicorn.run(app, host="127.0.0.1", port=8000)
