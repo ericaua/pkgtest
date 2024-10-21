@@ -59,7 +59,7 @@ pygments==2.18.0
     # via rich
 python-dotenv==1.0.1
     # via uvicorn
-python-multipart==0.0.13
+python-multipart==0.0.12
     # via fastapi
 pyyaml==6.0.2
     # via uvicorn
