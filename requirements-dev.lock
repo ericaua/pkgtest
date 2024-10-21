@@ -31,7 +31,7 @@ click==8.1.7
     # via uvicorn
 click-option-group==0.5.6
     # via python-semantic-release
-coverage==7.6.3
+coverage==7.6.4
     # via pytest-cov
 distlib==0.3.9
     # via virtualenv
