@@ -1,5 +1,5 @@
 [project]
-name = "ericaua-pkgtest"
+name = "pkgtest"
 dynamic = ["version"]
 description = "Add your description here"
 authors = [{ name = "ericaua", email = "erik.ulfhielm@gmail.com" }]
