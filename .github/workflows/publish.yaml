@@ -1,0 +1,28 @@
+name: Upload to TestPyPI
+
+on: [release]
+
+jobs:
+  pypi-publish:
+    name: publish
+    # needs: ci
+    # if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+
+    runs-on: ubuntu-latest
+    environment:
+      name: publish
+      url: https://test.pypi.org/p/ericaua-pkgtest
+    permissions:
+      id-token: write # IMPORTANT: this permission is mandatory for trusted publishing
+
+    steps:
+      - uses: actions/checkout@v4
+      - uses: eifinger/setup-rye@v4
+
+      - run: rye build --clean
+
+      - name: Publish package distributions to Test PyPI
+        uses: pypa/gh-action-pypi-publish@release/v1
+        with:
+          repository-url: https://test.pypi.org/legacy/
+          verbose: true

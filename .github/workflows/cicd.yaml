@@ -1,0 +1,30 @@
+name: cicd
+
+on: [push, pull_request, workflow_dispatch]
+
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+      - uses: eifinger/setup-rye@v4
+
+      - name: Install dependencies
+        run: |
+          rye sync --no-lock
+
+      - name: Run checks
+        run: |
+          rye run lint
+          rye run fmt
+          rye run type
+          rye run pytest tests/ --cov=pkgtest --cov-report=xml
+
+      - name: Build package
+        run: |
+          rye build --clean --wheel
+
+      - name: Build Docker image
+        run: |
+          docker build -t pkgimg .
