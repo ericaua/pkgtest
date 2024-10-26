@@ -11,6 +11,17 @@ def test_root() -> None:
     assert response.json() == "Hello World"
 
 
+def test_health_check() -> None:
+    response = client.get("/health")
+    assert response.status_code == 200
+    assert response.json()["status"] == "OK"
+
+
+def test_config() -> None:
+    response = client.get("/config")
+    assert response.status_code == 200
+
+
 def test_hello() -> None:
     name = "asdf"
     response = client.get(f"/hello?name={name}")
@@ -29,11 +40,6 @@ def test_goodbye() -> None:
     response = client.get(f"/bye?name={name}")
     assert response.status_code == 200
     assert response.json() == f"Goodbye {name}!"
-
-
-def test_config() -> None:
-    response = client.get("/config")
-    assert response.status_code == 200
 
 
 def test_add() -> None:

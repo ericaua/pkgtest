@@ -4,6 +4,7 @@ from fastapi import FastAPI
 
 from pkgtest import services
 from pkgtest.config import Settings, settings
+from pkgtest.model import HealthCheck
 
 log = logging.getLogger(__name__)
 app = FastAPI()
@@ -12,6 +13,11 @@ app = FastAPI()
 @app.get("/")
 async def root() -> str:
     return "Hello World"
+
+
+@app.get("/health")
+def get_health() -> HealthCheck:
+    return services.health_check()
 
 
 @app.get("/hello")
