@@ -101,7 +101,9 @@ pygments==2.18.0
     # via rich
 pytest==8.3.3
     # via pytest-cov
+    # via pytest-randomly
 pytest-cov==5.0.0
+pytest-randomly==3.16.0
 python-dotenv==1.0.1
     # via uvicorn
 python-gitlab==4.13.0
