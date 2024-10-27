@@ -49,3 +49,10 @@ def test_sub() -> None:
     res = runner.invoke(app, ["sub", f"{a}", f"{b}"])
     assert res.exit_code == 0
     assert f"{a-b}" in res.stdout
+
+
+def test_cadd() -> None:
+    a, b = 17, 42
+    res = runner.invoke(app, ["cadd", f"{a}", f"{b}"])
+    assert res.exit_code == 0
+    assert f"{a+b}" in res.stdout

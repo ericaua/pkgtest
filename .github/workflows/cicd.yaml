@@ -7,11 +7,19 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Install gcc
+        run: sudo apt get update && sudo apt install build-essential
+
       - name: Checkout code
         uses: actions/checkout@v4
+
+      - name: Install Rye
       - uses: eifinger/setup-rye@v4
 
-      - name: Install dependencies
+      - name: Compile C-library
+        run: gcc -fPIC -shared -o ./src/c/cadd.so ./src/c/cadd.c
+
+      - name: Install Python dependencies
         run: |
           rye sync --no-lock
 

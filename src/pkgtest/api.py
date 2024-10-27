@@ -55,3 +55,10 @@ async def sub(a: int, b: int) -> int:
     res = services.sub(a, b)
     log.info(res)
     return res
+
+
+@app.get("/cadd")
+async def cadd(a: int, b: int) -> int:
+    res = services.cadd(a, b)
+    log.info(res)
+    return res

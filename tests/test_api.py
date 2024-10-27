@@ -54,3 +54,10 @@ def test_sub() -> None:
     response = client.get(f"/sub?a={a}&b={b}")
     assert response.status_code == 200
     assert response.json() == a - b
+
+
+def test_cadd() -> None:
+    a, b = 17, 42
+    response = client.get(f"/cadd?a={a}&b={b}")
+    assert response.status_code == 200
+    assert response.json() == a + b

@@ -51,3 +51,10 @@ def sub(a: int, b: int) -> None:
     res = services.sub(a, b)
     log.info(res)
     print(res)
+
+
+@app.command()
+def cadd(a: int, b: int) -> None:
+    res = services.cadd(a, b)
+    log.info(res)
+    print(res)

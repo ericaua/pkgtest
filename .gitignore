@@ -1,6 +1,7 @@
 .pdm-build
 .ruff_cache
 lcov.info
+*.so
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

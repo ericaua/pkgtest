@@ -1,4 +1,9 @@
+from ctypes import cdll
+from typing import cast
+
 from pkgtest.model import HealthCheck
+
+dll = cdll.LoadLibrary(name="./src/c/cadd.so")
 
 
 def hello(name: str) -> str:
@@ -19,3 +24,7 @@ def add(a: int, b: int) -> int:
 
 def sub(a: int, b: int) -> int:
     return a - b
+
+
+def cadd(a: int, b: int) -> int:
+    return cast(int, dll.cadd(a, b))
