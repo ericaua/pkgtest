@@ -106,7 +106,7 @@ python-dotenv==1.0.1
     # via uvicorn
 python-gitlab==4.13.0
     # via python-semantic-release
-python-multipart==0.0.15
+python-multipart==0.0.16
     # via fastapi
 python-semantic-release==9.11.1
 pyyaml==6.0.2
