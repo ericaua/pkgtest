@@ -120,7 +120,7 @@ requests==2.32.3
     # via requests-toolbelt
 requests-toolbelt==1.0.0
     # via python-gitlab
-rich==13.9.3
+rich==13.9.4
     # via python-semantic-release
     # via typer
 shellingham==1.5.4
