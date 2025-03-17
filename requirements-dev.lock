@@ -12,26 +12,27 @@
 -e file:.
 annotated-types==0.7.0
     # via pydantic
-anyio==4.6.2.post1
+anyio==4.9.0
     # via httpx
     # via starlette
     # via watchfiles
-certifi==2024.8.30
+certifi==2025.1.31
     # via httpcore
     # via httpx
     # via requests
 cfgv==3.4.0
     # via pre-commit
-charset-normalizer==3.4.0
+charset-normalizer==3.4.1
     # via requests
-click==8.1.7
+click==8.1.8
     # via click-option-group
     # via python-semantic-release
+    # via rich-toolkit
     # via typer
     # via uvicorn
 click-option-group==0.5.6
     # via python-semantic-release
-coverage==7.6.4
+coverage==7.7.0
     # via pytest-cov
 distlib==0.3.9
     # via virtualenv
@@ -41,37 +42,37 @@ dotty-dict==1.3.1
     # via python-semantic-release
 email-validator==2.2.0
     # via fastapi
-fastapi==0.115.4
+fastapi==0.115.11
     # via pkgtest
-fastapi-cli==0.0.5
+fastapi-cli==0.0.7
     # via fastapi
-filelock==3.16.1
+filelock==3.18.0
     # via virtualenv
-gitdb==4.0.11
+gitdb==4.0.12
     # via gitpython
-gitpython==3.1.43
+gitpython==3.1.44
     # via python-semantic-release
 h11==0.14.0
     # via httpcore
     # via uvicorn
-httpcore==1.0.6
+httpcore==1.0.7
     # via httpx
 httptools==0.6.4
     # via uvicorn
-httpx==0.27.2
+httpx==0.28.1
     # via fastapi
-identify==2.6.2
+identify==2.6.9
     # via pre-commit
 idna==3.10
     # via anyio
     # via email-validator
     # via httpx
     # via requests
-importlib-resources==6.4.5
+importlib-resources==6.5.2
     # via python-semantic-release
 iniconfig==2.0.0
     # via pytest
-jinja2==3.1.4
+jinja2==3.1.6
     # via fastapi
     # via python-semantic-release
 markdown-it-py==3.0.0
@@ -92,14 +93,14 @@ platformdirs==4.3.6
 pluggy==1.5.0
     # via pytest
 pre-commit==4.0.1
-pydantic==2.9.2
+pydantic==2.10.6
     # via fastapi
     # via python-semantic-release
-pydantic-core==2.23.4
+pydantic-core==2.27.2
     # via pydantic
-pygments==2.18.0
+pygments==2.19.1
     # via rich
-pytest==8.3.3
+pytest==8.3.5
     # via pytest-cov
     # via pytest-randomly
 pytest-cov==5.0.0
@@ -108,7 +109,7 @@ python-dotenv==1.0.1
     # via uvicorn
 python-gitlab==4.13.0
     # via python-semantic-release
-python-multipart==0.0.17
+python-multipart==0.0.20
     # via fastapi
 python-semantic-release==9.11.1
 pyyaml==6.0.2
@@ -122,16 +123,18 @@ requests-toolbelt==1.0.0
     # via python-gitlab
 rich==13.9.4
     # via python-semantic-release
+    # via rich-toolkit
     # via typer
+rich-toolkit==0.13.2
+    # via fastapi-cli
 shellingham==1.5.4
     # via python-semantic-release
     # via typer
-smmap==5.0.1
+smmap==5.0.2
     # via gitdb
 sniffio==1.3.1
     # via anyio
-    # via httpx
-starlette==0.41.2
+starlette==0.46.1
     # via fastapi
 tomlkit==0.13.2
     # via python-semantic-release
@@ -143,17 +146,18 @@ typing-extensions==4.12.2
     # via mypy
     # via pydantic
     # via pydantic-core
+    # via rich-toolkit
     # via typer
-urllib3==2.2.3
+urllib3==2.3.0
     # via requests
-uvicorn==0.32.0
+uvicorn==0.34.0
     # via fastapi
     # via fastapi-cli
 uvloop==0.21.0
     # via uvicorn
-virtualenv==20.27.1
+virtualenv==20.29.3
     # via pre-commit
-watchfiles==0.24.0
+watchfiles==1.0.4
     # via uvicorn
-websockets==14.0
+websockets==15.0.1
     # via uvicorn
